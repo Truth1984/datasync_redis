@@ -1,0 +1,25 @@
+{
+  "name": "datasync_redis",
+  "version": "1.0.0",
+  "description": "redis based data syncing strategy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Truth1984/datasync_redis.git"
+  },
+  "keywords": [
+    "sync"
+  ],
+  "author": "awada.z",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Truth1984/datasync_redis/issues"
+  },
+  "homepage": "https://github.com/Truth1984/datasync_redis#readme",
+  "dependencies": {
+    "awadau": "^1.1.1"
+  }
+}
