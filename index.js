@@ -45,7 +45,10 @@ module.exports = class {
 
       //update
       if (inputMap[i][updateAt]) {
-        if (new Date(inputMap[i][updateAt]) > new Date(redisResult[i])) update[i] = inputMap[i];
+        if (new Date(inputMap[i][updateAt]) > new Date(redisResult[i])) {
+          await this.redisSet(i, inputMap[i][update]);
+          update[i] = inputMap[i];
+        }
       }
     }
 
