@@ -48,3 +48,11 @@ dsync.sync([
 }
  */
 ```
+
+#### reload strategy
+
+traditional dataflow : A -> RS -> B;
+
+if B already had `n` rows of record, use datasync_redis to sync from target sql first, as B -> RS;
+
+Then reverse data flow direction to accept data from source, as A -> RS -> B
