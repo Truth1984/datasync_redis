@@ -36,7 +36,7 @@ sync
     // console.log({ redisStore_init: redisStore });
     // console.log("sync data", data);
     if (!u.equal(u.mapKeys(data.create), ["2", "3", "4", "5", "6"]))
-      return Promise.reject("first init failed, not initialize properlly");
+      return Promise.reject("first init failed, did not initialize properly");
   })
   .then(() =>
     sync.sync([
@@ -57,12 +57,3 @@ sync
       return Promise.reject("sync to existing storage failed");
   })
   .then(() => console.log("all test passed"));
-
-let p = {
-  create: {
-    2: { p: 40, create_at: new Date(), update_at: null, deleteAt: new Date() },
-    3: { p: 42, create_at: new Date(), update_at: null, deleteAt: null },
-  },
-  update: {},
-  remove: {},
-};
